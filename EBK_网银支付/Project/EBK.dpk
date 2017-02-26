@@ -1,0 +1,53 @@
+package EBK;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  DevPub;
+
+contains
+  uEBKInit in '..\Src\uEBKInit.pas',
+  Pub_WYZF in '..\Src\Pub_WYZF.pas',
+  PubBankFunc in '..\Src\PubBankFunc.pas',
+  WYZF in '..\Src\WYZF.pas' {FormWYZF},
+  WYZF_DJSH in '..\Src\WYZF_DJSH.pas' {FrmWYZF_DJSH},
+  WYZFNotePad in '..\Src\WYZFNotePad.pas' {FormWYZFNotePad},
+  uEBK_IMPBM in '..\Src\uEBK_IMPBM.pas' {ImpBM_EBKFrm},
+  uEBK_ImportExcel in '..\Src\uEBK_ImportExcel.pas' {FrmEBKImportExcel},
+  uEBK_Params in '..\Src\uEBK_Params.pas' {EBKCSSZfrm},
+  SFZL in '..\Src\SFZL.pas' {FormSFZL},
+  uSelectFromData in '..\Src\uSelectFromData.pas' {FrmSelectFromData},
+  JGXX in '..\Src\JGXX.pas' {FormJGXX},
+  YHDQ in '..\Src\YHDQ.pas' {FormYHDQ},
+  YHHH in '..\Src\YHHH.pas' {FormYHHH},
+  YHJK in '..\Src\YHJK.pas' {FormYHJK},
+  YHJKPZ in '..\Src\YHJKPZ.pas' {FormYHJKPZ},
+  uQryzhye in '..\Src\uQryzhye.pas' {FormQryZHYE},
+  zhqry_mx in '..\Src\zhqry_mx.pas' {FormZHQry_MX},
+  uEBK_IMPOER in '..\Src\uEBK_IMPOER.pas' {ImpOER_EBKFrm},
+  uEBK_IMPOERPA in '..\Src\uEBK_IMPOERPA.pas' {ImpOER_EBKFrmPA},
+  EBK_UKeyInfo in '..\Src\EBK_UKeyInfo.pas';
+
+end.
