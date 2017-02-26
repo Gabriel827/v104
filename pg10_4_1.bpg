@@ -1,0 +1,48 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = R9Public.bpl BasCZ.bpl Bas.bpl R9Form.bpl R9PublicYS.bpl DevPub.bpl \
+  SYS.exe GL.bpl PluginCMSign.dll EBK.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+SYS.exe: ..\src\SYS_系统\project\SYS.dpr
+  $(DCC)
+
+R9Public.bpl: ..\src\PUB_公共\project\R9Public.dpk
+  $(DCC)
+
+GL.bpl: ..\src\GL_账务\Project\GL.dpk
+  $(DCC)
+
+R9PublicYS.bpl: ..\src\Pub_预算\project\R9PublicYS.dpk
+  $(DCC)
+
+Bas.bpl: ..\src\Bas_基础资料\project\Bas.dpk
+  $(DCC)
+
+BasCZ.bpl: ..\src\BAS_基础资料财政\project\BasCZ.dpk
+  $(DCC)
+
+R9Form.bpl: ..\src\Pub_公共窗体\Project\R9Form.dpk
+  $(DCC)
+
+PluginCMSign.dll: C:\hch\01-代码\46-出纳签章\Src\PluginCMSign.dpr
+  $(DCC)
+
+EBK.bpl: EBK_网银支付\Project\EBK.dpk
+  $(DCC)
+
+DevPub.bpl: C:\hch\01-代码\38-Pub_开发包\DevPub.dpk
+  $(DCC)
+
+
