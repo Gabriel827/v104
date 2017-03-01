@@ -122,15 +122,18 @@ type
   end;
 const
   GN_WYZF_Read: string = '73001';
-  GN_WYZF_Edit: string = '73002';
-  GN_WYZF_SH: string = '73003';
-  GN_WYZF_XS: string = '73004';
-  GN_WYZF_TH: string = '73005';
-  GN_WYZF_ZF: string = '73006';
-  GN_WYZF_HY: string = '73007';
-  GN_WYZF_ZX: string = '73008';
-  GN_WYZF_QXZX: string = '73009';
-  GN_WYZF_CXZX: string = '73010';
+  GN_WYZF_NEW: string = '73002';
+  GN_WYZF_Edit: string = '73003';
+  GN_WYZF_SH: string = '73004';
+  GN_WYZF_XS: string = '73005';
+  GN_WYZF_TH: string = '73006';
+  GN_WYZF_ZF: string = '73007';
+  GN_WYZF_HY: string = '73008';
+  GN_WYZF_ZX: string = '73009';
+  GN_WYZF_QXZX: string = '73010';
+  GN_WYZF_CXZX: string = '73011';
+  GN_WYZF_SGSB: string = '73012';    //手工失败
+  GN_WYZF_SGCG: string = '73013';    //手工成功
   GN_WYZFDJB_Read: string = '73016';
   GN_ZTCSSZ_Edit: string = '73021';
   GN_ZTCSSZ_Read: string = '73022';
