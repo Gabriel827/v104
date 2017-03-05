@@ -9,8 +9,8 @@ MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
 DCC = $(ROOT)\bin\dcc32.exe $**
 BRCC = $(ROOT)\bin\brcc32.exe $**
 #------------------------------------------------------------------------------
-PROJECTS = R9Public.bpl BasCZ.bpl Bas.bpl R9Form.bpl R9PublicYS.bpl DevPub.bpl \
-  SYS.exe GL.bpl PluginCMSign.dll EBK.bpl
+PROJECTS = R9Public.bpl Bas.bpl BasCZ.bpl R9Form.bpl R9PublicYS.bpl DevPub.bpl \
+  SYS.exe GL.bpl EBK.bpl GBI.bpl
 #------------------------------------------------------------------------------
 default: $(PROJECTS)
 #------------------------------------------------------------------------------
@@ -36,13 +36,13 @@ BasCZ.bpl: ..\src\BAS_基础资料财政\project\BasCZ.dpk
 R9Form.bpl: ..\src\Pub_公共窗体\Project\R9Form.dpk
   $(DCC)
 
-PluginCMSign.dll: C:\hch\01-代码\46-出纳签章\Src\PluginCMSign.dpr
-  $(DCC)
-
 EBK.bpl: EBK_网银支付\Project\EBK.dpk
   $(DCC)
 
 DevPub.bpl: C:\hch\01-代码\38-Pub_开发包\DevPub.dpk
+  $(DCC)
+
+GBI.bpl: GBI_指标管理\Project\GBI.dpk
   $(DCC)
 
 

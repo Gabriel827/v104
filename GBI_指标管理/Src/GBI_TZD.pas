@@ -697,7 +697,7 @@ begin
 
   vSQL := 'select * from GBI_TZDML'
           + ' where GSDM=' + QuotedStr(GszGSDM)
-          + ' and KJND=' + QuotedStr(GszKJND)
+         // + ' and KJND=' + QuotedStr(GszKJND)
           + ' and ZBLB=' + QuotedStr(FZBLBStr)
           + ' and DJLX=''TZD'' ' 
           + ' order by TZDID';
@@ -1574,11 +1574,10 @@ begin
           + 'GNKMDM,GNKMMC,JJKMDM,JJKMMC,ZJLYDM,ZJLYMC,ZJXZDM,ZJXZMC,'
           + 'ZFFSDM,ZFFSMC,JSFSDM,JSFSMC,ZBLYDM,ZBLYMC,XMFLDM,XMFLMC,WHDM,WHMC,'
           + 'FZ6DM,FZ6MC,FZ7DM,FZ7MC,FZ8DM,FZ8MC,FZ9DM,FZ9MC,FZADM,FZAMC'
-          + ' from GBI_ZBXMB where GSDM=' + QuotedStr(GszGSDM) + ' and KJND='
-          + QuotedStr(GszKJND) + ' and ZBLB=' + QuotedStr(FZBLBStr)+') XMB'
+          + ' from GBI_ZBXMB where GSDM=' + QuotedStr(GszGSDM)
+          + ' and ZBLB=' + QuotedStr(FZBLBStr)+') XMB'
           + ' where TZDNR.TZDID=' + IntToStr(ATZDID) + ' and TZDNR.GSDM='
-          + QuotedStr(GszGSDM) + ' and TZDNR.KJND=' + QuotedStr(GszKJND)
-          + ' and TZDNR.ZBID=XMB.ZBID'
+          + QuotedStr(GszGSDM) + ' and TZDNR.ZBID=XMB.ZBID'
           + ' order by TZDNR.TZDFLH';
 
   cdsTmp.Data := DataModulePub.GetDataBySQL(vSQL);
