@@ -1,0 +1,132 @@
+package GBI;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  Bas,
+  BasCZ,
+  R9PublicYS,
+  DSPack_D7;
+
+contains
+  uGBIInit in '..\..\..\src\GBI_指标管理\Src\uGBIInit.pas',
+  GBI_ZTCS in '..\..\..\src\GBI_指标管理\Src\GBI_ZTCS.pas' {FormZtcs},
+  GBI_TZD in '..\..\..\src\GBI_指标管理\Src\GBI_TZD.pas' {FormNoteItemTZ},
+  GBI_TZDPAD in '..\..\..\src\GBI_指标管理\Src\GBI_TZDPAD.pas' {FormTZDPad},
+  GBI_DJFJ in '..\..\..\src\GBI_指标管理\Src\GBI_DJFJ.pas' {frmFilesF},
+  GBI_BJJFLX in '..\..\..\src\GBI_指标管理\Src\GBI_BJJFLX.pas' {FormBJJFLX},
+  GBI_ExcelInput in '..\..\..\src\GBI_指标管理\Src\GBI_ExcelInput.pas' {FormExcelInput},
+  GBI_JFZB in '..\..\..\src\GBI_指标管理\Src\GBI_JFZB.pas' {FormJFZB},
+  GBI_YSZBBJ in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBBJ.pas' {FormYSZBBJ},
+  GBI_YSZBBJ_ZZB in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBBJ_ZZB.pas' {FormYSZBBJ},
+  GBI_YSZBBJ_DWZB in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBBJ_DWZB.pas' {FormYSZBBJ},
+  GBI_YSZBBJ_DWZB2 in '..\..\..\src\GBI_指标管理\src\GBI_YSZBBJ_DWZB2.pas' {FormYSZBBJ_DWZB2},
+  GBI_YSZBBJ_MXZB in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBBJ_MXZB.pas' {FormYSZBBJ},
+  GBI_YSZBBJ_Setup in '..\..\..\src\GBI_指标管理\src\GBI_YSZBBJ_Setup.pas' {FormYSZBBJ_Setup},
+  GBI_YSZBFind in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBFind.pas' {FormYSZBFind},
+  GBI_YSZBPad in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBPad.pas' {FormYSZBPad},
+  GBI_YSZBZDSC in '..\..\..\src\GBI_指标管理\Src\GBI_YSZBZDSC.pas' {FormYSZBZDSC},
+  GBI_ZBKZGZ in '..\..\..\src\GBI_指标管理\Src\GBI_ZBKZGZ.pas' {fmZBKZGZ},
+  GBI_XDYKJH in '..\..\..\src\GBI_指标管理\Src\GBI_XDYKJH.pas' {fmYKJH},
+  GBI_XDYKJH_XD in '..\..\..\src\GBI_指标管理\Src\GBI_XDYKJH_XD.pas' {fmYKJHXD},
+  GBI_ZBKZGZSZ in '..\..\..\src\GBI_指标管理\Src\GBI_ZBKZGZSZ.pas' {fmZBKZGZSZ},
+  GBI_ZBKMSZ in '..\..\..\src\GBI_指标管理\src\GBI_ZBKMSZ.pas' {fmZBKMSZ},
+  GBI_TZD_DWZB in '..\..\..\src\GBI_指标管理\Src\GBI_TZD_DWZB.pas' {FormDWZBTZ},
+  GBI_TZD_MXZB in '..\..\..\src\GBI_指标管理\Src\GBI_TZD_MXZB.pas' {FormMXZBTZ},
+  GBI_TZD_ZZB in '..\..\..\src\GBI_指标管理\Src\GBI_TZD_ZZB.pas' {FormZZBTZ},
+  GBI_YSZBPad_ZZB in '..\..\..\src\GBI_指标管理\src\GBI_YSZBPad_ZZB.pas' {FormYSZBPad_ZZB},
+  GBI_YSZBPad_DWZB in '..\..\..\src\GBI_指标管理\src\GBI_YSZBPad_DWZB.pas' {FormYSZBPad_DWZB},
+  GBI_YSZBPad_MXZB in '..\..\..\src\GBI_指标管理\src\GBI_YSZBPad_MXZB.pas' {FormYSZBPad_MXZB},
+  GBI_TZDPAD_ZZB in '..\..\..\src\GBI_指标管理\Src\GBI_TZDPAD_ZZB.pas' {FormTZDPadZZB},
+  GBI_TZDPAD_DWZB in '..\..\..\src\GBI_指标管理\Src\GBI_TZDPAD_DWZB.pas' {FormTZDPadDWZB},
+  GBI_TZDPAD_MXZB in '..\..\..\src\GBI_指标管理\Src\GBI_TZDPAD_MXZB.pas' {FormTZDPadMXZB},
+  GBI_OperOpt in '..\..\..\src\GBI_指标管理\Src\GBI_OperOpt.pas' {FormOperOpt},
+  GBI_ZBYEB in '..\..\..\src\GBI_指标管理\Src\GBI_ZBYEB.pas',
+  GBI_ZZBMXZ in '..\..\..\src\GBI_指标管理\Src\GBI_ZZBMXZ.pas' {GBI_ZZBMXZForm},
+  GBI_MXZBMXZ in '..\..\..\src\GBI_指标管理\Src\GBI_MXZBMXZ.pas' {GBI_MXZBMXZForm},
+  GBI_DWZBMXZ in '..\..\..\src\GBI_指标管理\Src\GBI_DWZBMXZ.pas' {GBI_DWZBMXZForm},
+  GBI_ZBKM in '..\..\..\src\GBI_指标管理\Src\GBI_ZBKM.pas' {GBI_ZBKMForm},
+  GBI_DWZBDJB in '..\..\..\src\GBI_指标管理\Src\GBI_DWZBDJB.pas' {fmDWZBDJB},
+  GBI_MXZBDJB in '..\..\..\src\GBI_指标管理\Src\GBI_MXZBDJB.pas' {fmMXZBDJB},
+  GBI_ZZBDJB in '..\..\..\src\GBI_指标管理\Src\GBI_ZZBDJB.pas' {fmZZBDJB},
+  GBI_NDJZ in '..\..\..\src\GBI_指标管理\Src\GBI_NDJZ.pas' {fmNDJZ},
+  GBI_DWZBZXQKB in '..\..\..\src\GBI_指标管理\Src\GBI_DWZBZXQKB.pas' {GBI_DWZBZXQKBForm},
+  GBI_MXZBZXQKB in '..\..\..\src\GBI_指标管理\Src\GBI_MXZBZXQKB.pas' {GBI_MXZBZXQKBForm},
+  GBI_ZZBZXQKB in '..\..\..\src\GBI_指标管理\Src\GBI_ZZBZXQKB.pas' {GBI_ZZBZXQKBForm},
+  GBI_MXZBTJB in '..\..\..\src\GBI_指标管理\Src\GBI_MXZBTJB.pas' {GBI_MXZBTJBForm},
+  GBI_TJD in '..\..\..\src\GBI_指标管理\Src\GBI_TJD.pas' {FormNoteItemTJ},
+  GBI_TJDPAD in '..\..\..\src\GBI_指标管理\Src\GBI_TJDPad.pas' {FormTJDPad},
+  GBI_TJD_MXZB in '..\..\..\src\GBI_指标管理\Src\GBI_TJD_MXZB.pas' {FormMXZBTJ},
+  GBI_TJDPAD_MXZB in '..\..\..\src\GBI_指标管理\Src\GBI_TJDPAD_MXZB.pas' {FormTJDPadMXZB},
+  GBI_ListSelectYSZBF in '..\..\..\src\GBI_指标管理\src\GBI_ListSelectYSZBF.pas' {GBI_SelectYSZBF},
+  GBI_KZZB in '..\..\..\src\GBI_指标管理\src\GBI_KZZB.pas' {FormKZZB},
+  GBI_ZBQX in '..\..\..\src\GBI_指标管理\src\GBI_ZBQX.pas' {FormZBQX},
+  GBI_ZBBG in '..\..\..\src\GBI_指标管理\src\GBI_ZBBG.pas' {FormZBBG},
+  GBI_ZBBG_MXZB in '..\..\..\src\GBI_指标管理\src\GBI_ZBBG_MXZB.pas' {FormMXZBBG},
+  GBI_ZBBGPad in '..\..\..\src\GBI_指标管理\src\GBI_ZBBGPad.pas' {FormZBBGPad},
+  GBI_ZBBGPad_MXZB in '..\..\..\src\GBI_指标管理\src\GBI_ZBBGPad_MXZB.pas' {FormZBBGPad_MXZB},
+  GBI_ImportKZGZ in '..\..\..\src\GBI_指标管理\src\GBI_ImportKZGZ.pas' {FormImportKZGZ},
+  GBI_JHXDPad in '..\..\..\src\GBI_指标管理\src\GBI_JHXDPad.pas' {fmJHXDPAD},
+  GBI_ListSelectDM_ZBKM in '..\..\..\src\GBI_指标管理\src\GBI_ListSelectDM_ZBKM.pas' {FormListSelectDM_ZBKM},
+  GBI_ZBFXB in '..\..\..\src\GBI_指标管理\src\GBI_ZBFXB.pas' {GBI_ZBFXBForm},
+  GBI_FLJE in '..\..\..\src\GBI_指标管理\src\GBI_FLJE.pas' {frmGBIFLJEQuery},
+  GBI_ZB_BG in '..\..\..\src\GBI_指标管理\src\GBI_ZB_BG.pas' {frmZBBG},
+  GBI_ZBKZGZXGLS in '..\..\..\src\GBI_指标管理\src\GBI_ZBKZGZXGLS.pas' {frmZBKZGZXGLS},
+  GBI_ZBKZGZXGLS_LS in '..\..\..\src\GBI_指标管理\src\GBI_ZBKZGZXGLS_LS.pas' {frmZBKZGZXGLS_LS},
+  GBI_ZBKZSMXB in '..\..\..\src\GBI_指标管理\src\GBI_ZBKZSMXB.pas' {frmZBKZSMXB},
+  GBI_KZZBPublic in '..\..\..\src\GBI_指标管理\src\GBI_KZZBPublic.pas',
+  GBI_KZZBBJ in '..\..\..\src\GBI_指标管理\src\GBI_KZZBBJ.pas' {fmKZZBBJ},
+  GBI_KZZBDJB in '..\..\..\src\GBI_指标管理\src\GBI_KZZBDJB.pas' {fmKZZBDJB},
+  GBI_KZZBMXZ in '..\..\..\src\GBI_指标管理\src\GBI_KZZBMXZ.pas' {frmKZZBMXZ},
+  GBI_KZGZSZ_New in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_New.pas' {frmNewZBKZGZ},
+  GBI_KZGZSZ_NewFA in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_NewFA.pas' {frmZBKZGZFA},
+  GBI_KZGZSZ_NewUnit in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_NewUnit.pas',
+  GBI_KZGZSZ_NewGrid in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_NewGrid.pas' {frmZBKZGZGrid},
+  GBI_KZGZSZ_ZBKZ in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_ZBKZ.pas' {frmKZGZZBKZ},
+  GBI_KZGZSZ_KM in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_KM.pas' {frmKZGZKM},
+  GBI_KZZB_XGLS in '..\..\..\src\GBI_指标管理\src\GBI_KZZB_XGLS.pas' {frmKZZB_XGLS},
+  GBI_KZZB_XGLSList in '..\..\..\src\GBI_指标管理\src\GBI_KZZB_XGLSList.pas' {frmKZZB_XGLSList},
+  GBI_ZBJFSZQKMXB in '..\..\..\src\GBI_指标管理\src\GBI_ZBJFSZQKMXB.pas' {frmZBJFSZQKMXB},
+  GBI_ZBJFSZQKMXB2015 in '..\..\..\src\GBI_指标管理\src\GBI_ZBJFSZQKMXB2015.pas' {frmZBJFSZQKMXB2015},
+  GBI_ZBJFSZQKB in '..\..\..\src\GBI_指标管理\src\GBI_ZBJFSZQKB.pas' {frmZBJFSZQKBF},
+  GBI_ZBSYRec in '..\..\..\src\GBI_指标管理\src\GBI_ZBSYRec.pas' {frmZBSYRecF},
+  GBI_ZBSYRec2015 in '..\..\..\src\GBI_指标管理\src\GBI_ZBSYRec2015.pas' {frmZBSYRec2015F},
+  GBI_ZBJFSZQKB2015 in '..\..\..\src\GBI_指标管理\src\GBI_ZBJFSZQKB2015.pas' {frmZBJFSZQKBF2015},
+  GBI_KZZB_XZ in '..\..\..\src\GBI_指标管理\src\GBI_KZZB_XZ.pas' {frmKZZBXZ},
+  GBI_ZBKZEDMXZ in '..\..\..\src\GBI_指标管理\src\GBI_ZBKZEDMXZ.pas' {frmZBKZEDMXZ},
+  GBI_KZEDTZD in '..\..\..\src\GBI_指标管理\src\GBI_KZEDTZD.pas' {FormGBI_KZEDTZD},
+  GBI_KZEDTZPad in '..\..\..\src\GBI_指标管理\src\GBI_KZEDTZPad.pas' {FormGBI_KZEDTZDJB},
+  GBI_DJSH in '..\..\..\src\GBI_指标管理\src\GBI_DJSH.pas' {FrmGBI_DJSH},
+  uGBI_Public in '..\..\..\src\GBI_指标管理\src\uGBI_Public.pas',
+  GBI_KZEDTZSHDJB in '..\..\..\src\GBI_指标管理\src\GBI_KZEDTZSHDJB.pas' {FormGBI_KZEDTZSHDJB},
+  GBI_XMZCXMB in '..\..\..\src\GBI_指标管理\src\GBI_XMZCXMB.pas' {frmXMZCMXB},
+  GIB_KZGZPreview in '..\..\..\src\GBI_指标管理\src\GIB_KZGZPreview.pas' {frmKZGZPreviewF},
+  GBI_KZGZSZ_New_ForHN in '..\..\..\src\GBI_指标管理\src\GBI_KZGZSZ_New_ForHN.pas' {frmNewZBKZGZ_ForHN},
+  GBI_SHInfo in '..\..\..\src\GBI_指标管理\src\GBI_SHInfo.pas' {GBI_SHInfoF},
+  GBI_KZEDYEB in '..\..\..\src\GBI_指标管理\src\GBI_KZEDYEB.pas' {FormGBI_KZEDYEB},
+  GBI_YSXD in '..\..\..\src\GBI_指标管理\src\GBI_YSXD.pas' {frmYSXD},
+  GBI_YSXDSZ in '..\..\..\src\GBI_指标管理\src\GBI_YSXDSZ.pas' {frmYSXDSZ};
+
+end.
