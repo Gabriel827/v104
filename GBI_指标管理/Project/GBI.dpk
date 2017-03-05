@@ -33,7 +33,7 @@ requires
 contains
   uGBIInit in '..\..\..\src\GBI_指标管理\Src\uGBIInit.pas',
   GBI_ZTCS in '..\..\..\src\GBI_指标管理\Src\GBI_ZTCS.pas' {FormZtcs},
-  GBI_TZD in '..\..\..\src\GBI_指标管理\Src\GBI_TZD.pas' {FormNoteItemTZ},
+  GBI_TZD in '..\Src\GBI_TZD.pas' {FormNoteItemTZ},
   GBI_TZDPAD in '..\..\..\src\GBI_指标管理\Src\GBI_TZDPAD.pas' {FormTZDPad},
   GBI_DJFJ in '..\..\..\src\GBI_指标管理\Src\GBI_DJFJ.pas' {frmFilesF},
   GBI_BJJFLX in '..\..\..\src\GBI_指标管理\Src\GBI_BJJFLX.pas' {FormBJJFLX},
