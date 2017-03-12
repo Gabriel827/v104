@@ -275,7 +275,7 @@ uses WinSock, Pub_Res, Pub_Global, Pub_Function, Pub_Message,
   Pub_Power, PubClass_GL, ChgPassword, SetGS, piKeyPass,
   DECUtil, Cipher, Hash, LoginKeyIntf, LoginSelectCZY,
   LoginHint, Pub_ProInfo, Main,Pub_SPlash, BackGroundUnit, UIR9_IMPL,
-  SetKJND,UfileOper,UdataTransfer,UIKey,UKeyDataInterface;
+  SetKJND,UfileOper,UdataTransfer;
 
 {$R *.DFM}
 
@@ -1743,7 +1743,7 @@ begin
 
 
   //zhengjy 20161213 初始化手写签名工厂类
-  KeyFactroy :=GetKeyFactory;
+  //KeyFactroy :=GetKeyFactory;
   //zhengjy 20161226 依据数据库加密控制菜单显示
   FormBackGround.GetCustomerCaption; //获得加密的显示内容
   FormBackGround.DealSignCertMenu;  //预置手写签字菜单，必须放在 GetCustomerCaption之后，ShowCustomerInfo之后。

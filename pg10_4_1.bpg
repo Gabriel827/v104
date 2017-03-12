@@ -10,13 +10,10 @@ DCC = $(ROOT)\bin\dcc32.exe $**
 BRCC = $(ROOT)\bin\brcc32.exe $**
 #------------------------------------------------------------------------------
 PROJECTS = R9Public.bpl Bas.bpl BasCZ.bpl R9Form.bpl R9PublicYS.bpl DevPub.bpl \
-  SYS.exe GL.bpl EBK.bpl GBI.bpl
+  GL.bpl EBK.bpl GBI.bpl SYS.exe
 #------------------------------------------------------------------------------
 default: $(PROJECTS)
 #------------------------------------------------------------------------------
-
-SYS.exe: ..\src\SYS_系统\project\SYS.dpr
-  $(DCC)
 
 R9Public.bpl: ..\src\PUB_公共\project\R9Public.dpk
   $(DCC)
@@ -43,6 +40,9 @@ DevPub.bpl: C:\hch\01-代码\38-Pub_开发包\DevPub.dpk
   $(DCC)
 
 GBI.bpl: GBI_指标管理\Project\GBI.dpk
+  $(DCC)
+
+SYS.exe: SYS_系统\project\SYS.dpr
   $(DCC)
 
 
