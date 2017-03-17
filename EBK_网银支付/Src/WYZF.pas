@@ -190,6 +190,7 @@ type
     procedure btnNewZFClick(Sender: TObject);
     procedure tsStateChange(Sender: TObject; NewTab: Integer;
       var AllowChange: Boolean);
+    procedure grdEditButtonClick(Sender: TObject);
   Private
     { Private declarations }
     FormHeight, DJXXHeight: Integer;
@@ -251,7 +252,7 @@ implementation
 
 uses pub_message, Pub_Global, pub_function, Pub_Power, ListSelectDM,
   DataModuleMain, PubBankFunc, WYZF_DJSH, DateUtils, uSelectFromData,
-  WYZFNotePad; // uSelectGBS,
+  WYZFNotePad, uEBKSelectBank; // uSelectGBS,
 
 {$R *.DFM}
 
@@ -3923,6 +3924,32 @@ begin
   end;
   cdsGroup.Filter := vFilter;
   cdsGroup.Filtered := True;
+end;
+
+procedure TFormWYZF.grdEditButtonClick(Sender: TObject);
+begin
+  //
+  if grd.SelectedField.FieldName = 'SKHYH' then
+  begin
+    //收银行名称，SYHMC， 银行开户名称
+    //如果是外部银行， 需要选择具体的行号
+    frmSelectBank := TfrmSelectBank.Create(nil);
+    try
+      frmSelectBank.DEPID := cdsGroup.FieldByName('SDEPID').AsString+' '+cdsGroup.FieldByName('SDEPNAME').AsString;
+      if frmSelectBank.ShowModal = mrOK then
+      begin
+        cdsGroup.Edit;
+        cdsGroup.FieldByName('SDEPID').AsString := TString.LeftStrBySp(frmSelectBank.cmbBank.Text);
+        //cdsGroup.FieldByName('SDEPNAME').AsString := TString.RightStrBySp(frmSelectBank.cmbBank.Text);
+        cdsGroup.FieldByName('SYHHH').AsString := frmSelectBank.cdsWY.FieldByName('BANK_CODE').AsString;
+        cdsGroup.FieldByName('SKHYH').AsString := frmSelectBank.cdsWY.FieldByName('BANK_NAME').AsString;
+        cdsGroup.FieldByName('SYHMC').AsString := frmSelectBank.cdsWY.FieldByName('BANK_NAME').AsString;
+        cdsGroup.FieldByName('crtcity').AsString := TString.RightStrBySp(frmSelectBank.cmbCity.Text);
+      end;
+    finally
+      frmSelectBank.Free;
+    end;
+  end;
 end;
 
 end.

@@ -38,6 +38,7 @@ contains
   uEBK_ImportExcel in '..\Src\uEBK_ImportExcel.pas' {FrmEBKImportExcel},
   uEBK_Params in '..\Src\uEBK_Params.pas' {EBKCSSZfrm},
   SFZL in '..\Src\SFZL.pas' {FormSFZL},
+  uEBKSelectBank in '..\Src\uEBKSelectBank.pas' {frmSelectBank},
   uSelectFromData in '..\Src\uSelectFromData.pas' {FrmSelectFromData},
   JGXX in '..\Src\JGXX.pas' {FormJGXX},
   YHDQ in '..\Src\YHDQ.pas' {FormYHDQ},

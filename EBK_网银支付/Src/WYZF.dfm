@@ -791,6 +791,7 @@ object FormWYZF: TFormWYZF
         TitleFont.Height = -15
         TitleFont.Name = #23435#20307
         TitleFont.Style = []
+        OnEditButtonClick = grdEditButtonClick
         Columns = <
           item
             EditButtons = <>
@@ -817,6 +818,7 @@ object FormWYZF: TFormWYZF
             Width = 107
           end
           item
+            ButtonStyle = cbsEllipsis
             EditButtons = <>
             FieldName = 'SKHYH'
             Footers = <>
