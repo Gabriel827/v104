@@ -1345,7 +1345,7 @@ object FormWYZF: TFormWYZF
             Width = 281
             Height = 23
             Style = csDropDownList
-            ItemHeight = 15
+            ItemHeight = 0
             TabOrder = 1
             OnChange = CB_PROVINCEChange
           end
@@ -1355,7 +1355,7 @@ object FormWYZF: TFormWYZF
             Width = 297
             Height = 23
             Style = csDropDownList
-            ItemHeight = 15
+            ItemHeight = 0
             TabOrder = 2
             OnChange = CB_CITYChange
           end
@@ -1365,7 +1365,7 @@ object FormWYZF: TFormWYZF
             Width = 281
             Height = 23
             Style = csDropDownList
-            ItemHeight = 15
+            ItemHeight = 0
             TabOrder = 3
             OnChange = CB_DEPIDChange
           end

@@ -12,16 +12,16 @@ unit SYS_TLB;
 // ************************************************************************ //
 
 // PASTLWTR : 1.2
-// File generated on 2015/9/23 13:03:22 from Type Library described below.
+// File generated on 2017-03-28 21:29:54 from Type Library described below.
 
 // ************************************************************************  //
-// Type Lib: E:\Devlop\U8前台程序(V10.3)\SRC\SYS_系统\project\SYS.tlb (1)
+// Type Lib: D:\R9Source\产品源代码\U8前台程序(V10.4)\src10.4.1\SYS_系统\project\SYS.tlb (1)
 // LIBID: {1D4AC294-C656-4F01-8F42-48EC81CBC275}
 // LCID: 0
 // Helpfile: 
 // HelpString: SYS Library
 // DepndLst: 
-//   (1) v2.0 stdole, (C:\Windows\SysWOW64\stdole2.tlb)
+//   (1) v2.0 stdole, (C:\Windows\system32\stdole2.tlb)
 // ************************************************************************ //
 {$TYPEDADDRESS OFF} // Unit must be compiled without type-checked pointers. 
 {$WARN SYMBOL_PLATFORM OFF}

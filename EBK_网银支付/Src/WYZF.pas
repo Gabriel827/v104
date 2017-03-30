@@ -2784,7 +2784,7 @@ var
     Result := True;
     for iCount := 1 to length(S) do
     begin
-      if not (S[iCount] in ['0'..'9']) then
+      if not (S[iCount] in ['0'..'9','-']) then
       begin
         Result := False;
         break;

@@ -10,7 +10,7 @@ DCC = $(ROOT)\bin\dcc32.exe $**
 BRCC = $(ROOT)\bin\brcc32.exe $**
 #------------------------------------------------------------------------------
 PROJECTS = R9Public.bpl Bas.bpl BasCZ.bpl R9Form.bpl R9PublicYS.bpl DevPub.bpl \
-  GL.bpl EBK.bpl GBI.bpl SYS.exe PluginCMSign.dll PA.bpl PAO.bpl
+  GL.bpl EBK.bpl GBI.bpl SYS.exe PluginCMSign.dll PA.bpl PAO.bpl SCS.bpl SPP.bpl
 #------------------------------------------------------------------------------
 default: $(PROJECTS)
 #------------------------------------------------------------------------------
@@ -52,6 +52,12 @@ PA.bpl: ..\src\PA_工资\Project\PA.dpk
   $(DCC)
 
 PAO.bpl: ..\src\PA_工资\Project\PAO.dpk
+  $(DCC)
+
+SCS.bpl: ..\src\SCS_收费系统\Project\SCS.dpk
+  $(DCC)
+
+SPP.bpl: ..\src\SPP_收费平台\Project\SPP.dpk
   $(DCC)
 
 
