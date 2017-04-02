@@ -155,10 +155,10 @@ begin
     //20160530084519 add by chengjf 20160602 支持密码初始化为身份证后六位
     if RadioButtonCSMM.Checked then
       szSQL := 'Update PUBZYXX set Password='+QuotedStr(edtInitPassword.Text)+' where GSDM='+QuotedStr(GszGSDM)
-        +IFF(cdtn='', '', ' and '+cdtn)
+        +' and KJND=' + QuotedStr(GszKJND)+ IFF(cdtn='', '', ' and '+cdtn)
     else if RadioButtonSFZMM.Checked then
       szSQL := 'Update PUBZYXX set Password=right(sfzh,6) where GSDM='+QuotedStr(GszGSDM)
-        +IFF(cdtn='', '', ' and '+cdtn);
+       +' and KJND=' + QuotedStr(GszKJND)  +IFF(cdtn='', '', ' and '+cdtn);
     PExecSQL(szSQL);
      Application.MessageBox('初始密码完成！',  '系统提示', MB_ICONInformation+MB_OK);
   end;
