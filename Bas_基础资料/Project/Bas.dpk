@@ -1,0 +1,112 @@
+package Bas;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  R9Public,
+  vcl,
+  rtl,
+  dbrtl,
+  dsnap,
+  vcldb,
+  EhLib70;
+
+contains
+  BJXM in '..\..\..\src\Bas_基础资料\Src\BJXM.pas' {FormBJXM},
+  JLXM in '..\..\..\src\Bas_基础资料\Src\JLXM.pas' {FormJLXM},
+  BJWLDW in '..\..\..\src\Bas_基础资料\Src\BJWLDW.pas' {FormBJWLDW},
+  JLWLDW in '..\..\..\src\Bas_基础资料\Src\JLWLDW.pas' {FormJLWLDW},
+  Bjwlkm in '..\..\..\src\Bas_基础资料\Src\Bjwlkm.pas' {FormBJWLKM},
+  JCZL_YSDWTB in '..\..\..\src\Bas_基础资料\Src\JCZL_YSDWTB.pas' {FormJCZL_YSDWTB},
+  JCZL_BASPub in '..\..\..\src\Bas_基础资料\Src\JCZL_BASPub.pas' {FormJCZL_BASPub},
+  JCZL_DJTDSZ in '..\..\..\src\Bas_基础资料\Src\JCZL_DJTDSZ.pas' {FormJCZL_DJTDSZ},
+  JCZL_GKKSPub in '..\..\..\src\Bas_基础资料\Src\JCZL_GKKSPub.pas' {FormJCZL_GKKSPub},
+  InputXJKM in '..\..\..\src\Bas_基础资料\Src\InputXJKM.pas' {FormInputXJKM},
+  InputXJKM_BM in '..\..\..\src\Bas_基础资料\Src\InputXJKM_BM.pas' {FormInputXJKM_BM},
+  InputXJKM_DW in '..\..\..\src\Bas_基础资料\Src\InputXJKM_DW.pas' {FormInputXJKM_DW},
+  InputXJKM_FZX in '..\..\..\src\Bas_基础资料\Src\InputXJKM_FZX.pas' {FormInputXJKM_fzx},
+  InputXJKM_XM in '..\..\..\src\Bas_基础资料\Src\InputXJKM_XM.pas' {FormInputXJKM_XM},
+  CopyXM in '..\..\..\src\Bas_基础资料\Src\CopyXM.pas' {FormCopyXM},
+  BJZYXX in '..\..\..\src\Bas_基础资料\Src\BJZYXX.pas' {FormBJZYXX},
+  JLFZX in '..\..\..\src\Bas_基础资料\Src\JLFZX.pas' {FormJLFZX},
+  FXSZ in '..\..\..\src\Bas_基础资料\Src\FXSZ.pas' {FormFXSZ},
+  BJXJLX in '..\..\..\src\Bas_基础资料\Src\BJXJLX.pas' {FormBJXJLX},
+  selectFA in '..\..\..\src\Bas_基础资料\Src\selectFA.pas' {FormSelectFA},
+  JLXMXX in '..\..\..\src\Bas_基础资料\Src\JLXMXX.pas' {FormBJXMXX},
+  JLKM in '..\..\..\src\Bas_基础资料\Src\JLKM.pas' {FormJLKM},
+  BJKM in '..\..\..\src\Bas_基础资料\Src\BJKM.pas' {FormBJKM},
+  SelectFZSMX in '..\..\..\src\Bas_基础资料\Src\SelectFZSMX.pas' {FormSelectFZSMX},
+  CopyKM in '..\..\..\src\Bas_基础资料\Src\CopyKM.pas' {FormCopyKM},
+  KMSelect in '..\..\..\src\Bas_基础资料\Src\KMSelect.pas' {FormKMSelect},
+  HLB in '..\..\..\src\Bas_基础资料\Src\HLB.pas' {FormHLB},
+  JLFFKM in '..\..\..\src\Bas_基础资料\Src\JLFFKM.pas' {FormJLFFKM},
+  BJFFKM in '..\..\..\src\Bas_基础资料\Src\BJFFKM.pas' {FormBJFFKM},
+  CXFFKM in '..\..\..\src\Bas_基础资料\Src\cxffkm.pas' {FormCXFFKM},
+  AdjustPrintColWidth_XM in '..\..\..\src\Bas_基础资料\Src\AdjustPrintColWidth_XM.pas' {FormAdjustPrintColWidth_XM},
+  AdjustPrintColWidth_BM in '..\..\..\src\Bas_基础资料\Src\AdjustPrintColWidth_BM.pas' {FormAdjustPrintColWidth_BM},
+  AdjustPrintColWidth_dw in '..\..\..\src\Bas_基础资料\Src\AdjustPrintColWidth_dw.pas' {FormAdjustPrintColWidth_DW},
+  AdjustPrintColWidth_FZX in '..\..\..\src\Bas_基础资料\Src\AdjustPrintColWidth_FZX.pas' {FormAdjustPrintColWidth_FZX},
+  AdjustPrintColWidth_XJLX in '..\..\..\src\Bas_基础资料\src\AdjustPrintColWidth_XJLX.pas' {FormAdjustPrintColWidth_XJLX},
+  PrintSzdwYhxx in '..\..\..\src\Bas_基础资料\Src\PrintSzdwYhxx.pas' {FormPrintSZDWYHXX},
+  JLBM in '..\..\..\src\Bas_基础资料\Src\JLBM.pas' {FormJLBM},
+  uBasInit in '..\..\..\src\Bas_基础资料\Src\uBasInit.pas',
+  uInitSystemBas in '..\..\..\src\Bas_基础资料\Src\uInitSystemBas.pas',
+  JLKMZ in '..\..\..\src\Bas_基础资料\Src\JLKMZ.pas' {FormJLKMZ},
+  BJKMZ in '..\..\..\src\Bas_基础资料\Src\BJKMZ.pas' {FormBJKMZ},
+  XGFHBFB in '..\..\..\src\Bas_基础资料\Src\XGFHBFB.pas' {FormXGFHBFB},
+  BJDWYSKM in '..\..\..\src\Bas_基础资料\Src\BJDWYSKM.pas' {FormBJDWYSKM},
+  DWYSKMPL in '..\..\..\src\Bas_基础资料\Src\DWYSKMPL.pas' {FormDWYSKMPL},
+  JLFZXX in '..\..\..\src\Bas_基础资料\Src\JLFZXX.pas' {FormJLFZXX},
+  PZLXDY in '..\..\..\src\Bas_基础资料\Src\PZLXDY.pas' {FormPZLXDY},
+  PZZY in '..\..\..\src\Bas_基础资料\Src\PZZY.pas' {FormPZZY},
+  YSFA in '..\..\..\src\Bas_基础资料\Src\YSFA.pas' {fmYSFA},
+  YSFASCMB in '..\..\..\src\Bas_基础资料\Src\YSFASCMB.pas' {fmSCMB},
+  YSBMFA in '..\..\..\src\Bas_基础资料\Src\YSBMFA.pas' {FormBMFA},
+  Bas_Zymagl in '..\Src\Bas_Zymagl.pas' {Bas_PwdFrm},
+  ufmFZHSRelation in '..\..\..\src\Bas_基础资料\src\ufmFZHSRelation.pas' {fmFZHSRelation},
+  ufmAddFzhsRelation in '..\..\..\src\Bas_基础资料\src\ufmAddFzhsRelation.pas' {fmAddFzhsRelation},
+  ufmAddFzhsRelationFA in '..\..\..\src\Bas_基础资料\src\ufmAddFzhsRelationFA.pas' {fmAddFzhsRelationFA},
+  LoadKMXX in '..\..\..\src\Bas_基础资料\src\LoadKMXX.pas',
+  frmFAXF in '..\..\..\src\Bas_基础资料\src\frmFAXF.pas' {frmFAXFF},
+  untFAXF in '..\..\..\src\Bas_基础资料\src\untFAXF.pas',
+  untClassBasic in '..\..\..\src\Bas_基础资料\src\untClassBasic.pas',
+  BJXMDYZT in '..\..\..\src\Bas_基础资料\src\BJXMDYZT.pas',
+  uBAS_BaseImport in '..\..\..\src\Bas_基础资料\src\uBAS_BaseImport.pas' {ImportFrm},
+  EditBZ in '..\..\..\src\Bas_基础资料\src\EditBZ.pas' {FormEditBZ},
+  BJXMYSKZ in '..\..\..\src\Bas_基础资料\src\BJXMYSKZ.pas' {FormBJXMYSKZ},
+  JC_PUBZD in '..\..\..\src\Bas_基础资料\src\JC_PUBZD.pas' {FormJCPUBZD},
+  uSelectPubZD in '..\..\..\src\Bas_基础资料\src\uSelectPubZD.pas' {FrmSelectPubZD},
+  untAddSimple in '..\..\..\src\Bas_基础资料\src\untAddSimple.pas' {FormAddSimple},
+  uJCZL_JDFBZSZ in '..\..\..\src\Bas_基础资料\src\uJCZL_JDFBZSZ.pas' {FormJCZL_JDFBZSZ},
+  uJCZL_HYFDESZ in '..\..\..\src\Bas_基础资料\src\uJCZL_HYFDESZ.pas' {FormJCZL_HYFDESZ},
+  uJCZL_PXFDESZ in '..\..\..\src\Bas_基础资料\src\uJCZL_PXFDESZ.pas' {FormJCZL_PXFDESZ},
+  JCZL_CLBTBZ in '..\..\..\src\Bas_基础资料\src\JCZL_CLBTBZ.pas' {FormJCZL_CLBTBZF},
+  Pub_ZN in '..\..\..\src\Bas_基础资料\src\Pub_ZN.pas' {frmZN},
+  Pub_ZN_CONF in '..\..\..\src\Bas_基础资料\src\Pub_ZN_CONF.pas' {frmZNConf},
+  Pub_ZN_Unit in '..\..\..\src\Bas_基础资料\src\Pub_ZN_Unit.pas',
+  UGZZD in '..\..\..\src\Bas_基础资料\src\UGZZD.pas' {frmGZZD},
+  PUB_SKRGL in '..\..\..\src\Bas_基础资料\src\PUB_SKRGL.pas' {frmSKRGL};
+
+end.
