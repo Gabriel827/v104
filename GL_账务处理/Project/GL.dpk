@@ -140,7 +140,7 @@ contains
   XJTJFXB in '..\..\..\src\GL_账务\src\XJTJFXB.pas' {XJTJFXB},
   XJYEB in '..\..\..\src\GL_账务\src\XJYEB.pas' {XJYEB},
   XJZZ in '..\..\..\src\GL_账务\src\XJZZ.pas' {XJZZ},
-  XSZ in '..\..\..\src\GL_账务\src\XSZ.pas' {XSZ},
+  XSZ in '..\Src\XSZ.pas' {XSZ},
   YEB_ALL in '..\..\..\src\GL_账务\src\YEB_ALL.pas' {YEB_ALL},
   YETJB in '..\..\..\src\GL_账务\src\YETJB.pas' {YETJB},
   YEZRCheck in '..\..\..\src\GL_账务\src\YEZRCheck.pas' {YEZRCheck},
