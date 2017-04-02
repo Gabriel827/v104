@@ -1396,9 +1396,9 @@ begin
       'nr.fzdm10,(select fzmc from gl_fzxzl zl where KJND=''' + GszKJND + ''' and gsdm=''' + GszGsdm + ''' and zl.fzdm=nr.fzdm10 and lbdm=''A'') fzdm10mc,' +
 
     'decode(InStr(KM.FZHS,'',2,''),0,'' '',NR.WLDM) GRWLDM,' +
-      'decode(InStr(KM.FZHS,'',2,''),0,'' '',(Select ZYXM from PubZYXX where ZYDM=NR.WLDM and NR.kjqj like kjnd||''%'' and GSDM=''' + GszGsdm + ''')) GRWLMC,' +
+      'decode(InStr(KM.FZHS,'',2,''),0,'' '',(Select ZYXM from PubZYXX where ZYDM=NR.WLDM  and GSDM=''' + GszGsdm + ''')) GRWLMC,' +
       'decode(InStr(KM.FZHS,'',3,''),0,'' '',NR.WLDM) DWWLDM,' +
-      'decode(InStr(KM.FZHS,'',3,''),0,'' '',(Select DWMC from PubKSZL where trim(DWDM)=trim(NR.WLDM) and NR.kjqj like kjnd||''%'' and GSDM=''' + GszGsdm + ''')) DWWLMC ';
+      'decode(InStr(KM.FZHS,'',3,''),0,'' '',(Select DWMC from PubKSZL where trim(DWDM)=trim(NR.WLDM) and GSDM=''' + GszGsdm + ''')) DWWLMC ';
 
     if bTempXSZspred then
     begin // lzn 2005.04.06
