@@ -8,8 +8,6 @@ uses
   shellAPI, ExtDlgs, FileCtrl, jpeg,Variants,Main,IdHashMessageDigest, IdHash, IdGlobal,
   DB, DBClient;
 
-
-
 type
   TMD5 = class(TIdHashMessageDigest5);
   TFormBackGround = class(TForm)
