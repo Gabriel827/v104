@@ -17,7 +17,6 @@ type
     N2: TMenuItem;
     N3: TMenuItem;
     N4: TMenuItem;
-
     PanelHomePage: TPanel;
     PanelToolbar: TPanel;
     Label1: TLabel;
